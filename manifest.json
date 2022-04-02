@@ -4,16 +4,20 @@
 	"version": "1.0",
 	"manifest_version": 3,
 	"background": {
-		"service_worker": "background.js"
+		"service_worker": "js/background.js"
 	},
 	"action": {
-		"default_popup": "popup.html"
+		"default_popup": "html/popup.html"
 	},
     "permissions": [
-        "cookies"
+        "cookies",
+		"storage"
     ],
 	"host_permissions": [
         "*://*.roblox.com/"
     ],
-    "options_page": "options.html"
+    "options_ui": {
+		"page": "html/options.html",
+		"open_in_tab": false
+	}
 }

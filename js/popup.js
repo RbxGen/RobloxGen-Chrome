@@ -18,14 +18,12 @@ function onFailure(err) {
 }
 
 randBtn.addEventListener('click', () => {
-    chrome.runtime.sendMessage({name: 'getConfig'}, config => {
-        chrome.runtime.sendMessage({name: 'login'}, async res => {
-            if (res.ok) {
-                onSuccess(res.name);
-            } else {
-                onFailure(res.err);
-            }
-        });
-    });
-	
+	statusText.style.display = 'none';
+	chrome.runtime.sendMessage({ name: 'login' }, async (res) => {
+		if (res.ok) {
+			onSuccess(res.name);
+		} else {
+			onFailure(res.err);
+		}
+	});
 });

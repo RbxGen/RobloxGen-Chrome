@@ -11,7 +11,7 @@
             color: white;
         }
 
-        #host-input {
+        input {
             background-color: #1D1D1D;
             border: 0;
             border-radius: 3px;
@@ -43,7 +43,13 @@
         Host (example: http://localhost): 
     </label>
     <input type="text" name="host" id="host-input">
+    <br>
+    <br>
+    <label for="timeout">
+        Timeout (in milliseconds): 
+    </label>
+    <input type="text" name="timeout" id="timeout-input">
     <button id="update-btn">Update</button>
-    <script src="options.js"></script>
+    <script src="../js/options.js"></script>
 </body>
 </html>
