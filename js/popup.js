@@ -1,6 +1,6 @@
 const randBtn = document.getElementById('randacc');
 const statusText = document.getElementById('status');
-
+const accountsCount = document.getElementById('accounts-cnt');
 function onSuccess(name) {
 	statusText.style.display = 'block';
 	statusText.classList.add('success');
@@ -26,4 +26,12 @@ randBtn.addEventListener('click', () => {
 			onFailure(res.err);
 		}
 	});
+});
+
+chrome.runtime.sendMessage({ name: 'count' }, async (res) => {
+	if (res.ok) {
+		accountsCount.textContent = res.count + ' accounts';
+	} else {
+		accountsCount.textContent = 'Failed to get count';
+	}
 });
