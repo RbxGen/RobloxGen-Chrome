@@ -1,13 +1,13 @@
 {
 	"name": "RobloxGen",
     "description": "Chrome extension for RobloxGen",
-	"version": "1.2",
+	"version": "2.0.0",
 	"manifest_version": 3,
 	"background": {
-		"service_worker": "js/background.js"
+		"service_worker": "background.js"
 	},
 	"action": {
-		"default_popup": "html/popup.html"
+		"default_popup": "popup.html"
 	},
     "permissions": [
         "cookies",
@@ -17,7 +17,12 @@
         "*://*.roblox.com/"
     ],
     "options_ui": {
-		"page": "html/options.html",
+		"page": "options.html",
 		"open_in_tab": false
+	},
+	"icons": {
+		"16": "logo128.png",
+		"48": "logo128.png",
+		"128": "logo128.png"
 	}
 }

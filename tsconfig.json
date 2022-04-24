@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ESNext",
+        "removeComments": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "alwaysStrict": true,
+        "types": [
+            "chrome"
+        ]
+    },
+    "include": [
+        "src/../."
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

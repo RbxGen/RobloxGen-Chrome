@@ -1,7 +1,8 @@
-const randBtn = document.getElementById('randacc');
-const statusText = document.getElementById('status');
-const accountsCount = document.getElementById('accounts-cnt');
-function onSuccess(name) {
+const randBtn = document.getElementById('randacc') as HTMLButtonElement;
+const statusText = document.getElementById('status') as HTMLParagraphElement;
+const accountsCount = document.getElementById('accounts-cnt') as HTMLParagraphElement;
+
+function onSuccess(name: string) {
 	statusText.style.display = 'block';
 	statusText.classList.add('success');
 	statusText.classList.remove('failed');
@@ -9,7 +10,7 @@ function onSuccess(name) {
 	statusText.textContent = 'Logged in as ' + name;
 }
 
-function onFailure(err) {
+function onFailure(err: string) {
 	statusText.style.display = 'block';
 	statusText.classList.add('failed');
 	statusText.classList.remove('success');
