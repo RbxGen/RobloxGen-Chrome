@@ -1,7 +1,7 @@
 # RobloxGen-Chrome
 This extension lets you log in to a random ROBLOX account easily.
 
-![RobloxGen extension interface](https://i.imgur.com/ntrrBio.png)
+![RobloxGen extension interface](https://i.imgur.com/aSjodfX.png)
 
 # Usage
 This requires a [RobloxGen v2](https://github.com/RbxGen/RobloxGen) server
